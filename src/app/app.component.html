@@ -41,6 +41,21 @@
           <td>number:'.0-2'</td>
           <td>{{ PI | number:'.0-2'}}</td>
         </tr>
+        <tr>
+          <td>{{ porcentaje }}</td>
+          <td>percent</td>
+          <td>{{ porcentaje | percent }}</td>
+        </tr>
+        <tr>
+          <td>{{ porcentaje }}</td>
+          <td>percent:'2.2-2'</td>
+          <td>{{ porcentaje | percent:'2.2-2' }}</td>
+        </tr>
+        <tr>
+          <td>{{ salario }}</td>
+          <td>currency:'EUR' </td>
+          <td>{{ salario | currency:'EUR' }}</td>
+        </tr>
       </tbody>
     </table>
   </div>
@@ -50,3 +65,12 @@
   <h1>Slice</h1>
   <li *ngFor="let item of arreglo | slice: 5:20">{{ item }}</li>
 </ul>
+<h3>JSON</h3>
+<div class="row">
+  <div class="col">
+    <pre>
+      {{heroe | json}}
+    </pre>
+    
+  </div>
+</div>
